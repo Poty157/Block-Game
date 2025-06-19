@@ -1,0 +1,95 @@
+/* Globální nastavení */
+body {
+  background-color: #1e2a47; /* Tmavě modré pozadí */
+  color: white; /* Bílý text pro kontrast */
+  font-family: 'Arial', sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Nastavení herní plochy */
+#grid {
+  display: grid;
+  grid-template-columns: repeat(8, 50px);
+  grid-template-rows: repeat(8, 50px);
+  gap: 2px;
+  border: 2px solid #444;
+  margin-bottom: 20px;
+}
+
+/* Styl pro jednotlivé buňky v gridu */
+.cell {
+  width: 50px;
+  height: 50px;
+  border: 1px solid #333;
+  background-color: #2f3b56; /* Temnější barva pro buňky */
+}
+
+/* Styl pro tvar při přetahování */
+.shape-preview {
+  display: grid;
+  gap: 2px;
+  margin: 5px;
+  border: 2px solid #444;
+}
+
+/* Styl pro texty */
+#score {
+  font-size: 1.5rem;
+  margin-top: 10px;
+  color: white;
+}
+
+#game-over {
+  background-color: rgba(0, 0, 0, 0.8);
+  color: white;
+  font-size: 2rem;
+  padding: 20px;
+  text-align: center;
+  display: none;
+}
+
+button {
+  background-color: #4e73df;
+  color: white;
+  font-size: 1rem;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-top: 10px;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #3e5db0;
+}
+
+/* Tvar pro nabídku */
+.shape {
+  display: inline-block;
+  margin: 10px;
+  cursor: pointer;
+}
+
+/* Zvýraznění tvaru při přetahování */
+.shape-preview .cell {
+  width: 40px;
+  height: 40px;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-in-out;
+}
+
+.shape-preview .preview {
+  opacity: 1; /* Ukázání tvaru při přetahování */
+}
+
+.preview {
+  opacity: 0.5;
+  background-color: rgba(255, 255, 255, 0.6);
+}
