@@ -1,7 +1,7 @@
 {
   "name": "Block Game",
   "short_name": "Block Game",
-  "start_url": "bb.html",
+  "start_url": "Block-Game/bb.html",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#000000",
