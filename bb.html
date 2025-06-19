@@ -18,7 +18,17 @@
     <h1>Game Over</h1>
     <button id="restart">Hrát znovu</button>
 </div>
-
+<script>
+    if ('serviceWorker' in navigator) {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(function (registration) {
+          console.log('Service Worker registered with scope:', registration.scope);
+        })
+        .catch(function (error) {
+          console.log('Service Worker registration failed:', error);
+        });
+    }
+</script>
     <script src="script.js"></script>   
 </body>
 </html>
